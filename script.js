@@ -13,7 +13,7 @@ const phone = document.querySelector('#phone');
 
 const pip = /(^[ІЇА-Я][іїа-я]+ [ІЇА-Я][іїа-я]+ [ІЇА-Я][іїа-я])|(^[A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]{1,})+$/;
 const passwordLog = /.{4,}/;
-const mailLog = /\w{5,}\@\w{1,}\./;
+const mailLog = /\w{1,}\@\w{1,}\./;
 const phoneValue = /\+\d{2}\(\d{3}\)\d{7}/;
 
 
