@@ -10,7 +10,6 @@ const mail = document.querySelector('#mail');
 const phone = document.querySelector('#phone');
 
 
-
 const pip = /(^[ІЇА-Я][іїа-я]+ [ІЇА-Я][іїа-я]+ [ІЇА-Я][іїа-я])|(^[A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]{1,})+$/;
 const passwordLog = /.{4,}/;
 const mailLog = /\w{1,}\@\w{1,}\./;
@@ -19,6 +18,12 @@ const phoneValue = /\+\d{2}\(\d{3}\)\d{7}/;
 
 email.addEventListener("input", (event) => {
     const logPip = event.target.value;
+    if (logPip === "") {
+        span1.style.display = 'none';
+    } else {
+        span1.style.display = 'block';
+        span1.style.left = '870px'
+    }
     const resultPip = pip.test(logPip);
     console.log(event.target.value);
 
@@ -29,8 +34,15 @@ email.addEventListener("input", (event) => {
     };
 });
 
+
 password.addEventListener("input", (event) => {
     const getPassword = event.target.value;
+    if (getPassword === "") {
+        span2.style.display = 'none';
+    } else {
+        span2.style.display = 'block';
+        span2.style.left = '870px'
+    }
     const resultPassword = passwordLog.test(getPassword);
     console.log(event.target.value);
 
@@ -41,8 +53,15 @@ password.addEventListener("input", (event) => {
     };
 });
 
+
 mail.addEventListener("input", (event) => {
     const getMail = event.target.value;
+    if (getMail === "") {
+        span3.style.display = 'none';
+    } else {
+        span3.style.display = 'block';
+        span3.style.left = '870px'
+    }
     const resultMail = mailLog.test(getMail);
     console.log(event.target.value);
 
@@ -53,8 +72,15 @@ mail.addEventListener("input", (event) => {
     };
 });
 
+
 phone.addEventListener("input", (event) => {
     const getPhone = event.target.value;
+    if (getPhone === "") {
+        span4.style.display = 'none';
+    } else {
+        span4.style.display = 'block';
+        span4.style.left = '870px'
+    }
     const resultPhone = phoneValue.test(getPhone);
     console.log(event.target.value);
 
@@ -77,6 +103,7 @@ function getN() {
     };
 };
 
+
 let getNum1 = '';
 password.addEventListener('click', getEl);
 function getEl() {
@@ -86,6 +113,7 @@ function getEl() {
         console.log(getNum1);
     };
 };
+
 
 loading.style.display = 'none';
 login.addEventListener('click', getEnter);
